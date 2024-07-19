@@ -61,7 +61,7 @@ def main():
         amount = 1
         try:
             choice = str(input())
-            if re.match(r'(i)help|[hH]?', choice):
+            if re.match(re.compile(r'\b(help|h)\b', re.IGNORECASE), choice):
                 print("Usage:")
                 print("Write any int from the dice list")
                 print("Or <int>x<int> for multi die rolls")
